@@ -31,7 +31,7 @@
                 '',
                 'dupson'
             );
-            $sql = "SELECT * FROM zamowienia1" ;
+            $sql = "SELECT * FROM zamowienie1" ;
             $result = mysqli_query($conn, $sql);
             while ($row = mysqli_fetch_array($result))
             {

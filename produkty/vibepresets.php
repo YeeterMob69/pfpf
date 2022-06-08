@@ -89,7 +89,7 @@
         $card = $_POST['ccard'];
         $DATA = date('Y-m-d H:i:s'); // rok miesiac data godzina minuta sekunda
         // bierzemy z posta i wrzucamy do bazy
-        $sql = "INSERT INTO zamowienia1 (id, imienazwisko, adres, numertel, credit, email, DATA) VALUES ('', '$fullname', '$adres', '$numtel', '$card', '$email', '$DATA')";
+        $sql = "INSERT INTO zamowienie1 (id, imienazwisko, adres, numertel, credit, email, DATA) VALUES ('', '$fullname', '$adres', '$numtel', '$card', '$email', '$DATA')";
         $result = $conn->query($sql); // wykonuje kwerende
         $conn -> close(); //zamyka polaczenie
     ?>
