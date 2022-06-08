@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+}
+body {
+    background-color: black;
+    height: 90vh;
+    bottom: 0px;
+}
+/*----------HEADER------------*/
+.header {
+    height: 10vh;
+    background-color: #484444;
+    font-size: 1em;
+    box-shadow: 0px 0px 50px black;
+    position: fixed;
+    width: 100vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    z-index: 2147483647;
+}
+.headtext {
+    width: 110px;
+    text-align: center;
+    display: inline;
+}
+.headimg{
+    height: 60px;
+    width: 60px;
+}
+.header a{
+    color: white;
+    text-decoration: none;
+}
+.header a:hover {
+    color: #fff900;
+}
+.header a:active{
+    color: black;
+}
+/*------------shop---------*/
+.shop {
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+.item {
+    cursor: pointer;
+    text-align: center;
+}
+.item  img{
+    width: 250px;
+    height: 250px;
+}
+.item img:hover {
+    
+}
+/* ----------------footer---------------------------*/
+.bottom{
+    display: flex;
+    justify-content: center;
+}
+.newsletter {
+    padding-left: 50px;
+    text-transform: uppercase;
+    color: white;
+}
+.newsletter h3{
+    font-size: 1.5em;
+}
+.input {
+    padding: 2px;
+}
+.nawigacja {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 15px;
+}
+.nawigacja a{
+    color: white;
+    text-decoration: underline;
+}
+.nawigacja a:hover {
+    color: #fff900;
+}
+.nawigacja a:active{
+    color: black;
+}
