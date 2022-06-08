@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/produkty/vibepresets.css">
+    <link rel="stylesheet" href="vibepresets.css">
     <title>Friday Media - Usługi</title>
 </head>
 
@@ -48,8 +48,10 @@
                 numquam qui!
             </p>
         </div>
+
+<!--        PO wcisnieciu kup teraz dane do bazy  Z bazy do admin panel-->
         <div class="checkout">
-            <form action="" method="">
+            <form action="vibepresets.php" method="POST">
                 <label for="fn"> Full Name</label>
                 <input type="text" id="fn" name="firstname" placeholder="Mateusz Caban" required>
                 <br>
@@ -69,6 +71,23 @@
             </form>
         </div>
     </div>
+    <?php
+        $conn = mysqli_connect(
+                'localhost',
+            'root',
+            '',
+            'nigger'
+        );
+        $fullname = $_POST['firstname'];
+        $email = $_POST['email'];
+        $adres = $_POST['address'];
+        $numtel = $_POST['phoneNum'];
+        $card = $_POST['ccard'];
+
+        $sql = "INSERT INTO zamowienia(id, imienazwisko, adres, numertel, credit, email) VALUES ('', '$fullname', '$adres', '$numtel', '$card', '$email')";
+        $result = $conn->query($sql);
+        $conn -> close();
+    ?>
 
 
 
