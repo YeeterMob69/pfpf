@@ -72,21 +72,26 @@
         </div>
     </div>
     <?php
+//    wyłącza głupie błedy!!!!!!!!
+    error_reporting(0);
+    // połączenie z baza danych
         $conn = mysqli_connect(
                 'localhost',
             'root',
             '',
-            'nigger'
+            'dupson'
         );
+        //zabieranie z posta pierdół z formularza
         $fullname = $_POST['firstname'];
         $email = $_POST['email'];
         $adres = $_POST['address'];
         $numtel = $_POST['phoneNum'];
         $card = $_POST['ccard'];
-
-        $sql = "INSERT INTO zamowienia(id, imienazwisko, adres, numertel, credit, email) VALUES ('', '$fullname', '$adres', '$numtel', '$card', '$email')";
-        $result = $conn->query($sql);
-        $conn -> close();
+        $DATA = date('Y-m-d H:i:s'); // rok miesiac data godzina minuta sekunda
+        // bierzemy z posta i wrzucamy do bazy
+        $sql = "INSERT INTO zamowienia1 (id, imienazwisko, adres, numertel, credit, email, DATA) VALUES ('', '$fullname', '$adres', '$numtel', '$card', '$email', '$DATA')";
+        $result = $conn->query($sql); // wykonuje kwerende
+        $conn -> close(); //zamyka polaczenie
     ?>
 
 
